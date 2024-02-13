@@ -1,7 +1,10 @@
 import {CarsForm} from "./CarsForm";
 import {Cars} from "./Cars";
+import {useState} from "react";
+import {ICar} from "../intrerfaces/carInterface";
 
 export const CarsContain = () => {
+    const [cars, setCars]= useState<ICar[]>([])
 
 
     return (
@@ -9,7 +12,7 @@ export const CarsContain = () => {
             <CarsForm/>
             <hr/>
             <hr/>
-            <Cars/>
+            <Cars cars={cars}/>
         </div>
     );
 };
