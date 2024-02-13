@@ -7,10 +7,11 @@ import {carService} from "../services/carService";
 export const CarsContain = () => {
     const [cars, setCars] = useState<ICar[]>([])
     const [trigger, setTrigger] = useState<boolean>(null)
+    const [carForUpdate, setCarForUpdate] = useState<ICar>(null)
 
     useEffect(() => {
         carService.getAll().then(({data}) => setCars(data))
-    }, [trigger])
+    }, [trigger, carForUpdate])
 
     const changeTrigger = () =>{
         setTrigger(prevState => !prevState)
@@ -18,10 +19,10 @@ export const CarsContain = () => {
 
     return (
         <div>
-            <CarsForm changeTrigger={changeTrigger}/>
+            <CarsForm changeTrigger={changeTrigger} carForUpdate={carForUpdate} setCarForUpdate={setCarForUpdate}/>
             <hr/>
             <hr/>
-            <Cars cars={cars} changeTrigger={changeTrigger}/>
+            <Cars cars={cars} changeTrigger={changeTrigger} setCarForUpdate={setCarForUpdate}/>
         </div>
     );
 };
