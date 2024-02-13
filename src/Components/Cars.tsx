@@ -13,7 +13,8 @@ export const Cars: FC<IProps> = ({cars, changeTrigger, setCarForUpdate}) => {
     return (
         <div>
             {
-                cars.map(car => <Car key={car.id} car={car} changeTrigger={changeTrigger} setCarForUpdate={setCarForUpdate}/>)
+                cars.map(car => <Car key={car.id} car={car} changeTrigger={changeTrigger}
+                                     setCarForUpdate={setCarForUpdate}/>)
             }
         </div>
     );

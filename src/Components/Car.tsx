@@ -13,7 +13,7 @@ export const Car: FC<IPops> = ({car, changeTrigger, setCarForUpdate}) => {
 
     const {id, year, price, brand} = car
 
-    const deleteById = async () =>{
+    const deleteById = async () => {
         await carService.deleteById(id)
         changeTrigger()
     }

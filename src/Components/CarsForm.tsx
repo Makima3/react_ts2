@@ -30,7 +30,7 @@ export const CarsForm: FC<IProps> = ({changeTrigger, carForUpdate, setCarForUpda
 
     const update: SubmitHandler<ICar> = async (car) => {
         await carService.updateById(carForUpdate.id, car)
-        setCarForUpdate (null)
+        setCarForUpdate(null)
         changeTrigger()
         reset()
     }

@@ -13,7 +13,7 @@ export const CarsContain = () => {
         carService.getAll().then(({data}) => setCars(data))
     }, [trigger, carForUpdate])
 
-    const changeTrigger = () =>{
+    const changeTrigger = () => {
         setTrigger(prevState => !prevState)
     }
 
