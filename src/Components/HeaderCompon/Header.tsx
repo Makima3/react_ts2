@@ -1,10 +1,7 @@
-const App = () => {
+export const Header = () => {
     return (
         <div>
             App
         </div>
     );
 };
-
-export {App};
-
