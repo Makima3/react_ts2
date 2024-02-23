@@ -1,7 +1,8 @@
-export const Header = () => {
+export const Posts = () => {
     return (
         <div>
-            App
+            posts
         </div>
     );
 };
+
