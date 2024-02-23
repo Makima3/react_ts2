@@ -10,7 +10,7 @@ const urls = {
     comments,
     todos,
     posts: {
-        byId: (id: number) => `${posts}/${id}`
+        byPostId: (postId: number) => `${posts}/${postId}`
     }
 }
 

@@ -1,5 +1,5 @@
 import {IComments} from "../../interfaces";
-import React, {FC, MouseEventHandler} from "react";
+import {FC} from "react";
 import {useNavigate} from "react-router-dom";
 
 interface IProps {

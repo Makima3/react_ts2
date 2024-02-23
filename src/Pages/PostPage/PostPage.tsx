@@ -1,11 +1,13 @@
-import {useLocation} from "react-router-dom";
+import {useAppLocation} from "../../hooks";
+import {Posts} from "../../Components";
 
 export const PostPage = () => {
 
-    const {state} = useLocation()
+    const {state: postId} = useAppLocation<any>()
+
     return (
         <div>
-            posts
+            <Posts postId={postId}/>
         </div>
     );
 };
