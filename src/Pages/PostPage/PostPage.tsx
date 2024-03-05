@@ -3,7 +3,7 @@ import {Posts} from "../../Components";
 
 export const PostPage = () => {
 
-    const {state: postId} = useAppLocation<any>()
+    const {state: {postId}} = useAppLocation<{postId: number}>()
 
     return (
         <div>

@@ -4,7 +4,7 @@ import {postService} from "../../services";
 import {Post} from "./Post";
 
 interface IProps {
-    postId: any
+    postId: number
 }
 
 export const Posts: FC<IProps> = ({postId}) => {
